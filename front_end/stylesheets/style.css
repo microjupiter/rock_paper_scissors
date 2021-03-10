@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+}
+header {
+  background: white;
+  padding: 20px;
+}
+header > h1 {
+  color: black;
+  text-align: center;
+  font-family: Asap, sans-serif;
+}
+.score-board {
+  margin: 20px auto;
+  border: 3px solid white;
+  width: 200px;
+}
