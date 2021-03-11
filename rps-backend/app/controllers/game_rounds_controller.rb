@@ -10,7 +10,8 @@ class GameRoundsController < ApplicationController
 
   # GET /game_rounds/1
   def show
-    render json: @game_round
+    user = Game_round.find(params[:id])
+    render json: Game_roundSerializer.new(game_round)
   end
 
   # POST /game_rounds

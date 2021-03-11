@@ -10,7 +10,8 @@ class ComputersController < ApplicationController
 
   # GET /computers/1
   def show
-    render json: @computer
+    user = Computer.find(params[:id])
+    render json: ComputerSerializer.new(computer)
   end
 
   # POST /computers

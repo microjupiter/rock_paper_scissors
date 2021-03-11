@@ -11,6 +11,8 @@ class GamesController < ApplicationController
   # GET /games/1
   def show
     render json: @game
+    user = Game.find(params[:id])
+    render json: GameSerializer.new(game)
   end
 
   # POST /games

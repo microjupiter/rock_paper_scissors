@@ -5,19 +5,92 @@
   box-sizing: border-box;
 }
 body {
-  background-color: black;
+  background-color: #24272E;
+  font-family: Asap, sans-serif;
 }
 header {
   background: white;
   padding: 20px;
 }
 header > h1 {
-  color: black;
+  color: #24272E;
   text-align: center;
-  font-family: Asap, sans-serif;
 }
 .score-board {
   margin: 20px auto;
   border: 3px solid white;
-  width: 200px;
+  border-radius: 4px;
+  text-align: center;
+  width: 250px;
+  color: white;
+  font-size: 46px;
+  padding: 15px 20px;
+  position: relative;
 }
+.badge {
+  background: #E2584D;
+  color: white;
+  font-size: 14px;
+  padding: 2px 10px;
+}
+#user-label {
+  position: absolute;
+  top: 30px;
+  left: -25px;
+}
+#computer-label {
+  position: absolute;
+  top: 30px;
+  right: -30px;
+}
+.result {
+  font-size: 40px;
+  color: white;
+}
+.result > p {
+  text-align: center;
+  font-weight: bold;
+}
+.choices {
+  margin: 50px 0;
+  text-align: center;
+}
+.choice {
+  border: 4px solid white;
+  border-radius: 50%;
+  margin: 0 15px;
+  padding: 20px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.choice:hover {
+  cursor: pointer;
+  background: violet;
+}
+#action-message {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+.leaderboard{
+  width: 400px;
+  height: 300px;
+  margin: 100px auto 0;
+  background: violet;
+  border-radius: 5px;
+  padding: 25px 40px;
+  position: center;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+call_me_hand::skin-tone-3
+joy
+call_me_hand::skin-tone-3
+
+
+
+
+
+2:27
