@@ -1,3 +1,4 @@
+const baseUrl = "http://localhost:3000"
 let userScore = 0;
 let computerScore = 0;
 const userScore_span = document.getElementById("user-score");
@@ -9,16 +10,19 @@ const paper_div = document.getElementById("p");
 const scissors_div = document.getElementById("s");
 const leaderboard_div = document.getElementById("leaderboard");
 /*Dom Variables Element span tag */
+
 function getComputerChoice() {
   const choices = ['r','p','s'];
   const randomNumber = Math.floor(Math.random() * 3);
   return choices[randomNumber];
 }
+
 function convertToWord(letter) {
   if (letter === "r") return "Rock";
   if (letter === "p") return "Paper";
   return "Scissors";
 }
+
 function win(userChoice, computerChoice) {
   userScore++;
   userScore_span.innerHTML = userScore;
@@ -27,7 +31,8 @@ function win(userChoice, computerChoice) {
   const smallCompWord = "robo".fontsize(3).sub();
   result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord}  beats  ${convertToWord(computerChoice)}${smallCompWord}  You Win! `;
 }
-function lose(userChoice, computerChoice) {
+
+function lose(userChoice, computerChoice) { 
   computerScore++;
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
@@ -36,11 +41,13 @@ function lose(userChoice, computerChoice) {
   result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord}  loses  ${convertToWord(computerChoice)}${smallCompWord}  You Lost!..  `;
   ;
 }
+
 function draw(userChoice, computerChoice) {
   const smallUserWord = "user".fontsize(3).sub();
   const smallCompWord = "robo".fontsize(3).sub();
   result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord}  equals  ${convertToWord(computerChoice)}${smallCompWord}  Draw `;
 }
+
 function game(userChoice) {
   const computerChoice = getComputerChoice();
   switch (userChoice + computerChoice) {
@@ -61,6 +68,7 @@ function game(userChoice) {
       break;
   }
 }
+
 function main() {
   rock_div.addEventListener('click', function() {
       game("r");
@@ -72,7 +80,9 @@ function main() {
       game("s");
   })
 }
+
 main();
+
 class Leaderboard {
   static all = []
   constructor(attr){
@@ -88,6 +98,7 @@ class Leaderboard {
     leaderboard.save()
     return leaderboard
   }
+
   static putScoresOnDom(score){
     let div = document.createElement("div")
     let li = document.createElement("li")
