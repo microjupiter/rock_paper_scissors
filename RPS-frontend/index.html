@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/3da1a747b2.js"></script>
+    <title>RockPaperScissors</title>
+    <link rel="stylesheet" href="stylesheet/styles.css">
+</head>
+<body>
+  <header>
+    <h1>RockPaperScissors</h1>
+  </header>
+  <div class ="score-board">
+    <div id="user-label" class="badge">User</div>
+    <div id="computer-label" class="badge">Robo</div>
+    <span id="user-score">0</span>:<span id="computer-score">0</span>
+    </div>
+
+    <div class="result">
+      <p>Paper beats Rock. You Win!</p>
+    </div>
+
+    <div class="choices">
+      <div class="choice" id="r">
+        <i id="rock" class="fas fa-hand-rock fa-10x"></i>
+      </div>
+      <div class="choice" id="p"> 
+      <i id="paper" class="fas fa-hand-paper fa-10x"></i>
+      </div>
+      <div class="choice" id="s"> 
+        <i id="scissors" class="fas fa-hand-scissors fa-10x"></i>
+      </div>
+    </div>
+
+    <p id="action-message"> Make your move </p>
+    
+    <div class="wrapper">
+      <div class="user" id="user">
+        <!-- <input type="text" name="user" id="user"/>
+        <p>Enter Name:</p>
+        <br>
+        <input type="submit" value="Start Game" /> -->
+      </div>
+    </div>
+    
+    <div class="wrapper">
+      <div class="game" id="game">
+        <h2>Score Board</h2>
+        <br>
+        <div class="scores" id="scores">
+        </div>
+      </div>
+    </div>
+
+    <script src="javascripts/index.js" charset="utf-8"></script>
+    <script src="javascripts/globals.js" ></script>
+    <script src="javascripts/models/game.js" ></script>
+    <script src="javascripts/models/user.js" ></script>
+  </body>
+</html>
+   
