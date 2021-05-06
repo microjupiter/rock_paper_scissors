@@ -33,6 +33,18 @@ header > h1 {
   position: relative;
 }
 
+.options {
+  margin: 20px auto;
+  border: 3px solid white;
+  border-radius: 4px;
+  text-align: center;
+  width: 250px;
+  color: white;
+  font-size: 46px;
+  padding: 15px 20px;
+  position: relative;
+}
+
 .badge {
   background: #66CDAA;
   color: white;

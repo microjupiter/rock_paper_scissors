@@ -12,6 +12,8 @@ const paper_div = document.getElementById("p");
 const scissors_div = document.getElementById("s");
 const game_div = document.getElementById("game");
 const user_div = document.getElementById("user");
+let ascending = true 
+
 window.addEventListener('DOMContentLoaded', (event) => {
   Game.renderForm()
   Game.addButtonFunctionality()
@@ -98,4 +100,8 @@ let submitScore = (e) => {
     .then(() => {
       Game.fetchScores();
     })
+
+    
+
+    
 }

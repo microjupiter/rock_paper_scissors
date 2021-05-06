@@ -23,13 +23,15 @@
   }
 
   static renderScores(){
-    Game.sortedGames().forEach(game => Game.putScoresOnDom(game))
+    Game.sortedGames().forEach(game => game.putScoresOnDom())
   }
 
   static sortedGames(){
     let sortedGames = [...Game.all].sort((a ,b) => b.score - a.score)
     return sortedGames
   }
+
+  
 
   static updateScores(){
     Game.clearScores()
@@ -40,23 +42,28 @@
     scoreDiv.innerText = score
   }
 
+  
+
   static deleteButton(){
     let form = document.getElementById("form")
     form.innerHTML = ""
   }
 
-   static putScoresOnDom(score){
+    putScoresOnDom(){
     let li = document.createElement("li")
-    li.innerText = `${score.user.name}: ${score.score}` 
+    li.innerText = `${this.user.name}: ${this.score}` 
     let btn = document.createElement("button")
     btn.innerText =  "Delete Score"
     li.appendChild(btn)
     document.getElementById("scores").appendChild(li)
-    btn.id = score.id
+    btn.id = this.id
     btn.addEventListener("click", Game.deleteScore)
   
   }
 
+
+
+  
   /** requests to the backend */
 
   static fetchScores = () => {
